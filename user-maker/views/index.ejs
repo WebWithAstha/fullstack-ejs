@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Make a user | it's fun</title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div id="main">
+
+      <h1>Create User</h1>
+      <form action="/create" method="post">
+        <input type="text" name="username" placeholder="Enter username">
+        <input type="email" name="email" placeholder="Enter email">
+        <textarea name="caption" id="" placeholder="Enter caption"></textarea>
+        <input type="submit" class="btn" value="create">
+      </form>
+
+    <div id="user-wrapper">
+      <% users.forEach(function(user){ %>
+        <div class="user">
+          <h1>
+            <%= user.username %>
+          </h1>
+          <h3>
+            <%= user.email %>
+          </h3>
+          <p>
+            <%= user.caption %>
+          </p>
+          <div class="btn user-likes">
+            <a href="/likes/<%= user._id%>"><i class="ri-thumb-up-fill"></i></a>
+            <span>
+              <%= user.likes %>
+            </span>
+          </div>
+          <a class="btn" style="background-color: rgba(220, 20, 60, 0.819);color: white;"
+            href="/delete/<%= user._id%>">delete</a>
+          <a class="btn" style="background-color: rgba(255, 255, 0, 0.741);color: black;"
+            href="/update/<%= user._id%>">update</a>
+        </div>
+        <% }) %>
+    </div>
+
+  </div>
+
+
+
+</body>
+
+</html>

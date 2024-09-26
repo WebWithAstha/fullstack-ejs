@@ -1,0 +1,105 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: dosis;
+}
+
+html,
+body {
+  width: 100%;
+}
+
+#main {
+  width: 100%;
+  background-color: rgb(156, 216, 253);
+  min-height: 100vh;
+  padding: 1vw 0;
+}
+
+#main>h1{
+ text-align: center;
+  margin-bottom: 1vw;
+
+} 
+form{
+  width: max-content;
+  background-color: rgb(3, 43, 90);
+  padding: 2vw 1vw;
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+  border-radius: 3px;
+  margin: auto;
+
+
+}
+
+form input,form textarea{
+  padding: .3vw;
+  border: 1px solid lightblue;
+  border-radius: 3px;
+  background-color: transparent;
+  outline: none;
+  color: white;
+  width: 100%;
+}
+form textarea{
+  display: block;
+  margin: .5vw 0;
+}
+form textarea::placeholder{
+  color: white;
+}
+form .btn{
+  background-color: royalblue;
+  border: none;
+  width: max-content;
+  
+
+  
+}
+
+form input::placeholder{
+  color: white;
+}
+#main #user-wrapper{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1vw;
+  padding: 3vw 2vw;
+}
+#main .user{
+  padding: 1.2vw;
+  border-radius: 3px;
+  background-color: rgb(122, 204, 255);
+  background-color: rgb(3, 43, 90);
+  color: white;
+
+
+}
+#main .btn{
+  padding: .5vw 1.3vw;
+  text-transform: uppercase;
+  display: inline-block;
+  
+}
+#main .user .btn{
+  margin-top: .6vw;
+}
+#main .user .user-likes{
+  padding: 0;
+  display: flex;
+  gap: .5vw;
+  width: 100%;
+  justify-content: space-between;
+}
+
+a{
+  text-decoration: none;
+  cursor: pointer;
+  color: black;
+
+}

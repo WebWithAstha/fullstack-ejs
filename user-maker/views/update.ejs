@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make a user | it's fun</title>
+    <link rel='stylesheet' href='/stylesheets/update.css' />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css">
+</head>
+<body>
+    <div id="main">
+        <h1>Update!!</h1>
+        <form action="/update/<%= user._id %>" method="post">
+        <input type="text" name="username" value="<%= user.username %>"  placeholder="Enter username">
+        <input type="email" name="email" value="<%= user.email %>" placeholder="Enter email">
+        <textarea name="caption" id="" value="<%= user.caption %>" placeholder="Enter caption" ></textarea>
+        <input type="submit" class="btn" value="update">
+      </form>
+    </div>
+</body>
+</html>
